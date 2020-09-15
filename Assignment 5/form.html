@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+    form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    form li+li {
+        margin-top: 1em;
+    }
+    
+    label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    input {
+        /* To make sure that all text fields have the same font settings */
+        font: 1em sans-serif;
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+        /* Match form field borders */
+        border: 1px solid #999;
+    }
+    
+    input:focus {
+        /* Additional highlight for focused elements */
+        border-color: #000;
+    }
+    
+    .button {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - User Registration Form</title>
+</head>
+
+<body>
+
+    <form action="complete.html" method="POST">
+        <h1>User Registration Form</h1>
+        <ul>
+            <!-- Name Inputs -->
+            <li>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br>
+            </li>
+            <hr>
+            <!-- Relationship Status -->
+            <p><b>Marital Status</b></p>
+            <li>
+                <label for="married">Married</label>
+                <input type="radio" id="married" name="relationship_status" value="married">
+
+                <label for="single">Single</label>
+                <input type="radio" id="single" name="relationship_status" value="single">
+
+            </li>
+            <hr>
+            <!-- Programming Language -->
+            <p><b>Favourite Programming Language</b></p>
+            <li>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="fav_language" value="HTML">
+                <label for="javascript">Javascript</label>
+                <input type="checkbox" id="javascript" name="fav_language" value="Javascript">
+            </li>
+
+            <!-- Submit Button -->
+            <li>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

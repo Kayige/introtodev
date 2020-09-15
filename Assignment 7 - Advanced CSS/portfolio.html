@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>My Portfolio HTML</title>
+</head>
+<style>
+    img {
+        max-width: 400px;
+        max-height: auto;
+    }
+    
+    #zebra tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    #bg-img {
+        background-color: #d9ffd9;
+        background-image: url(back.gif);
+        text-align: center;
+    }
+    /* unvisited link */
+    
+    a:link {
+        color: red;
+    }
+    /* visited link */
+    
+    a:visited {
+        color: green;
+    }
+    /* mouse over link */
+    
+    a:hover {
+        color: blue;
+    }
+    /* selected link */
+    
+    a:active {
+        color: red;
+    }
+</style>
+
+<body>
+    <a href="https://www.linkedin.com/in/gabrielleeyj">
+        <H1>Welcome to Gabriel's Page</H1>
+    </a> <br/>
+    <h2 style="color:blue" target="_blank">Enjoy your time!</h2>
+    <p>Here is a paragraph</p>
+    <!-- Comment Line here -->
+    <a href="https://www.linkedin.com/in/gabrielleeyj">Linkedin</a> <br/>
+    <a href="https://www.linkedin.com/in/gabrielleeyj" target="_blank"><img src="https://gabrielleeyj.com/static/6a00f1d5399dbf53d109eecf2586e0f9/06655/about.jpg" alt="thats me!" /></a>
+    <br>
+    <h3>Educational Qualifications</h3>
+
+    <!-- Table with no style -->
+    <table>
+
+        <!-- Title Row -->
+        <tr>
+            <th>Title</th>
+            <th>School</th>
+            <th>Graduated</th>
+        </tr>
+        <!-- Second Row -->
+        <tr>
+            <td>Bachelor of Science in Cyber Security</td>
+            <td>Edith Cowan University</td>
+            <td>Present</td>
+        </tr>
+        <!-- Third Row -->
+        <tr>
+            <td>Diploma in Applied Psychology</td>
+            <td>Raffles College of Higher Education</td>
+            <td>2008</td>
+        </tr>
+        <!-- Fourth Row -->
+        <tr>
+            <td>GCE 'O' Levels</td>
+            <td>St. Gabriel's Secondary School</td>
+            <td>2007</td>
+        </tr>
+    </table>
+
+
+    <h3>Table with Zebra Style</h3>
+    <!-- Table with Zebra Style -->
+    <table id="zebra">
+
+        <!-- Title Row -->
+        <tr>
+            <th>Title</th>
+            <th>School</th>
+            <th>Graduated</th>
+        </tr>
+        <!-- Second Row -->
+        <tr>
+            <td>Bachelor of Science in Cyber Security</td>
+            <td>Edith Cowan University</td>
+            <td>Present</td>
+        </tr>
+        <!-- Third Row -->
+        <tr>
+            <td>Diploma in Applied Psychology</td>
+            <td>Raffles College of Higher Education</td>
+            <td>2008</td>
+        </tr>
+        <!-- Fourth Row -->
+        <tr>
+            <td>GCE 'O' Levels</td>
+            <td>St. Gabriel's Secondary School</td>
+            <td>2007</td>
+        </tr>
+    </table>
+
+    <h3>Table with Background Image</h3>
+    <!-- Table with Zebra Style -->
+    <table id="bg-img">
+
+        <!-- First Row -->
+        <tr>
+            <td>Top Left</td>
+            <td></td>
+            <td>Top Right</td>
+        </tr>
+        <!-- Second Row -->
+        <tr>
+            <td></td>
+            <td>Middle</td>
+            <td></td>
+        </tr>
+        <!-- Third Row -->
+        <tr>
+            <td>Bottom Left</td>
+            <td></td>
+            <td>Bottom Right</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
