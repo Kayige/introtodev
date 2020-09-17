@@ -54,6 +54,10 @@ header {
     color: #222;
 }
 
+.thick {
+    font-weight: 300;
+}
+
 figure {
     margin: 0
 }
