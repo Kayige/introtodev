@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        let num1 = [1, 2];
+        let num2 = [2, 3];
+        let total = [];
+
+        function printArry(num1, num2) {
+            document.getElementById('array1').innerText = "[ " + num1 + " ]";
+            document.getElementById('array2').innerText = "[ " + num2 + " ]";
+        }
+
+
+        function myFunction(arr1, arr2) {
+            for (let i = 0; i < arr1.length; i++) {
+                total.push(arr1[i] + arr2[i]);
+            }
+            return document.getElementById('answer').innerText = "[ " + total + " ]";
+        }
+    </script>
+</head>
+
+<h1>Sum of Array</h1>
+<button type="button" onclick="printArry(num1,num2)">Show Array Inital Value</button>
+<p>Array 1:</p>
+<p id="array1"></p>
+<p>Array 2 :</p>
+<p id="array2"></p>
+<button type="button" onclick="myFunction(num1,num2)">Run Function</button>
+<p>Array Total :</p>
+<p id="answer"></p>
+
+</html>
