@@ -1,0 +1,35 @@
+Create classes and objects as per the following requirements /** * Car - Super Class * * SUV - Type of car * MPV * Hatchback * * SUV * Merc GLA (Object of a type) * BMW X3 * * 1. Define the properties and behviors of each of these classes * 2. Create
+the classes * 2. Create the inheritance relationship between the classes * 4. Create objects of the different types of cars */
+
+<!DOCTYPE html>
+
+<head>
+    <title>FS102 Assignment 4</title>
+</head>
+<script>
+    function Car(wheels, doors) {
+        this.wheels = wheels;
+        this.doors = doors;
+    }
+
+    function Suv(wheels, doors, brand, model) {
+        Car.call(this, wheels, doors);
+        this.brand = brand;
+        this.model = model;
+    }
+
+    function Mpv(wheels, doors, brand, model) {
+        Car.call(this, wheels, doors);
+        this.brand = brand;
+        this.model = model;
+    }
+
+    Suv.prototype = new Car();
+    Mpv.prototype = new Car();
+
+    let mySuv = new Suv(4, 5, "BMW", "X3");
+    let myMpv = new Mpv(4, 5, "Honda", "Odyssey");
+</script>
+
+
+</html>
