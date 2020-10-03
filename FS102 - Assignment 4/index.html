@@ -7,26 +7,34 @@ the classes * 2. Create the inheritance relationship between the classes * 4. Cr
     <title>FS102 Assignment 4</title>
 </head>
 <script>
+    // Parent Class 
     function Car(wheels, doors) {
         this.wheels = wheels;
         this.doors = doors;
     }
 
+    // Sub Class Suv
     function Suv(wheels, doors, brand, model) {
         Car.call(this, wheels, doors);
         this.brand = brand;
         this.model = model;
     }
 
+    // Sub Class Mpv
     function Mpv(wheels, doors, brand, model) {
         Car.call(this, wheels, doors);
         this.brand = brand;
         this.model = model;
     }
 
-    Suv.prototype = new Car();
-    Mpv.prototype = new Car();
 
+    // Initialize Objects with Relationship
+    Suv.prototype = new Car();
+    Suv.prototype.constructor = Suv;
+    Mpv.prototype = new Car();
+    Mpv.prototype.constructor = Mpv;
+
+    // Create Variable Inputs
     let mySuv = new Suv(4, 5, "BMW", "X3");
     let myMpv = new Mpv(4, 5, "Honda", "Odyssey");
 </script>
