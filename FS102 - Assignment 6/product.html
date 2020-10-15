@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta Description -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio Project FS102 - Gabriel Lee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="FS102 Assignment">
+    <meta name="author" content="Gabriel Lee">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Stylesheet Imports -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<header>
+    <!-- Basic Logo -->
+    <a href="#brand">
+        <figure class="brand"><b>GABRIEL</b>LEEYJ </figure>
+    </a>
+    <!-- Navigation Menu-->
+    <nav class="menu">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+        <ul>
+            <a href="product.html">
+                <li>Products</li>
+            </a>
+            <a href="#about">
+                <li>About</li>
+            </a>
+            <a href="#experience">
+                <li>Skills</li>
+            </a>
+            <a href="#contact">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <!-- Introduction Section-->
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>
+                        Hello!<span class="thick"> and</span> Welcome<span class="thick"> to my Products Page!</span>
+                    </h2>
+                    <p>
+                        Here you will find 📦 Products that I have created.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <form>
+                        <label>Currency</label>
+                        <select id="currency-selector" onchange="currency()">
+                            <option value="SGD" selected>Singapore Dollars</option>
+                            <option value="USD">US Dollars</option>
+                            <option value="GBP">British Pounds</option>
+                            <option value="JPY">Japanese Yen</option>
+                            <option value="RM">Malaysian Ringgit</option>
+                            <option value="BHT">Thai Baht</option>
+                            <option value="IDR">Indonesian Rupiah</option>
+                          </select>
+                    </form>
+                </div>
+                <div class="col-4" id="filter">
+                    <button onclick='resetFilter()'>Show All</button>
+                    <button onclick='filter("Food")'>Food</button>
+                    <button onclick='filter("Drink")'>Drinks</button>
+                    <button onclick='filter("Household")'>Household</button>
+                </div>
+            </div>
+            <div class="row" id="productname">
+            </div>
+        </div>
+    </section>
+    <br>
+</body>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer--copyright">
+            <p>
+                Copyright &copy;2020 <a href="https://www.gabrielleeyj.com/" target="_blank">gabrielleeyj.com</a> . All Rights Reserved.
+            </p>
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <a id="button"></a>
+
+    <!-- Original JS Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Filter Function for Product Catalog -->
+    <script src="js/filter.js"></script>
+    <!-- Currency Converter Function for Product Catalog -->
+    <script src="js/currency.js"></script>
+    <!-- Display Product Catalog via JSON -->
+    <script src="js/product.js"></script>
+
+
+    </html>
