@@ -1,12 +1,15 @@
 function currency() {
     // set dropdown selector value as a variable for detection
     let selector = document.getElementById("currency-selector").value;
-    // find all the class with price
+    // searches the DOM with all the class with same name
     let list = document.getElementsByClassName("price");
     let currencytext = document.getElementsByClassName("currencytext");
+
+
     if (selector == "SGD") {
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : SGD";
+            // base price (SGD) from price array created
             let sgd = price[i];
             list[i].innerHTML = sgd;
         }
