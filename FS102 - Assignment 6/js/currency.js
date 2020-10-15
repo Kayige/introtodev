@@ -15,6 +15,7 @@ function currency() {
         let usd;
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : USD";
+            // calculates base price (SGD) * USD rate
             let usd = price[i] * 1.25;
             list[i].innerHTML = usd;
         }
@@ -23,6 +24,7 @@ function currency() {
         let gbp;
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : Pound";
+            // calculates base price (SGD) * GBP rate
             let gbp = price[i] * 1.35;
             list[i].innerHTML = "£ " + gbp.toFixed(2);
         }
@@ -31,6 +33,7 @@ function currency() {
         let jpy;
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : Yen";
+            // calculates base price (SGD) * JPY rate
             let jpy = price[i] * 77.54;
             list[i].innerHTML = "¥ " + jpy.toFixed(2);
         }
@@ -39,6 +42,7 @@ function currency() {
         let rm;
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : Ringgit";
+            // calculates base price (SGD) * RM rate
             let rm = price[i] * 3.06;
             list[i].innerHTML = "RM " + rm.toFixed(2);
         }
@@ -47,6 +51,7 @@ function currency() {
         let bht;
         for (let i = 0; i < list.length; i++) {
             currencytext[i].innerHTML = "Price : Baht";
+            // calculates base price (SGD) * BAHT rate
             let bht = price[i] * 22.94;
             list[i].innerHTML = "฿ " + bht.toFixed(2);
         }
@@ -54,7 +59,8 @@ function currency() {
     if (selector == "IDR") {
         let idr;
         for (let i = 0; i < list.length; i++) {
-            currencytext[i].innerHTML = "Price : Rupiah"
+            currencytext[i].innerHTML = "Price : Rupiah";
+            // calculates base price (SGD) * Rp rate
             let idr = price[i] * 10852;
             list[i].innerHTML = "Rp " + idr.toFixed(2);
         }

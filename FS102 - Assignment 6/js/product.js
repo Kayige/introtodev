@@ -11,6 +11,7 @@ xhttp.onreadystatechange = function() {
             txt += "<p class='currencytext'>" + "Price: ($)" + "</p>";
             txt += "<p class='price'>" + myProducts.products[i].price + "</p>";
             txt += "<br>" + "Category: " + myProducts.products[i].category + "</div>";
+            // push product price to an array for use in currency coversion.
             price.push(myProducts.products[i].price);
         }
         document.getElementById("productname").innerHTML = txt;
