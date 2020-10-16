@@ -34,6 +34,18 @@
             "name": "Toilet Paper",
             "category": "Household",
             "price": 2.50
+        },
+        {
+            "id": "6",
+            "name": "Shampoo",
+            "category": "Household",
+            "price": 2.50
+        },
+        {
+            "id": "7",
+            "name": "Rice",
+            "category": "Food",
+            "price": 12.75
         }
     ]
 }
