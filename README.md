@@ -3,6 +3,8 @@ Introduction to Web Development Stuff<br/><br/>
 
 Gabriel Lee<br/><br/>
 
+16/10/2020 - Uploaded FS102 Assignment 6 Changes
+14/10/2020 - Uploaded FS102 Assignment 6 initial files
 01/10/2020 - Renamed Folders to Module - Assignment Format / Uploaded FS102 Assignment 4<br/>
 28/09/2020 - Uploaded FS102 Assignment 3<br/>
 17/09/2020 - Updated JS fixes to project<br/>
