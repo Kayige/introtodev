@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        function timeout(milliseconds) {
+            var deferred = $.Deferred();
+
+            setTimeout(deferred.resolve, milliseconds);
+
+            return deferred.promise();
+        }
+
+        timeout(3000).then(function() {
+            console.log('Waiting since 3 seconds');
+        });
+    </script>
+</head>
+
+</html>
