@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $.ajax("productCatalog.json", {
+            type: "GET",
+            dataType: "json",
+            success: function(resp) {
+                console.log(typeof resp);
+            },
+            error: function(req, status, err) {
+                console.log("something went wrong", status, err);
+            },
+        });
+    </script>
+</head>
+
+<body></body>
+
+</html>
