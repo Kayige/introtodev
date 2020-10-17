@@ -15,6 +15,8 @@ xhttp.onreadystatechange = function() {
             price.push(myProducts.products[i].price);
         }
         document.getElementById("productname").innerHTML = txt;
+    } else {
+        return this.status == 500;
     }
 };
 xhttp.open("GET", "json/product.json", true);
