@@ -10,25 +10,66 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    // Javascript Format -----
+    // let gData;
+    // let xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         let data = JSON.parse(this.responseText);
+    //         gData = data;
+    //         word(0)
+    //     }
+    // }
+
+    // function word(i) {
+    //     $("#quotes").html("<h3>" + gData.quotes[i].quote + "</h3>");
+    //     $("#quotes").append("<p><em> <b>-</b> " + gData.quotes[i].author + "</em></p>");
+    // }
+
+
+    // xhttp.open("GET", "quotes.json", true);
+    // xhttp.send();
+
+    let gData = [];
+    let arrlen = "";
+    // Jquery Format
     $(document).ready(function() {
         $.ajax({
             dataType: "json",
             url: "quotes.json",
             data: "quotes.json",
             success: function(data) {
-                // test out console print of data
-                console.log(data);
-                // test how to get quote out
-                console.log(data.quotes[0].quote);
-                console.log(data.quotes[0].author);
-                // get quote out to html
-                $("#quotes").html("<h3>" + data.quotes[2].quote + "</h3>");
-                // append author name into div
-                $("#quotes").append("<p><em> <b>-</b> " + data.quotes[2].author + "</em></p>");
+                // on load of ajax show first element of json quote.
+                $("#quotes").html("<h3>" + data.quotes[0].quote + "</h3>");
+                $("#quotes").append("<p><em> <b>-</b> " + data.quotes[0].author + "</em></p>");
 
+                // set parsed data to global data value
+                gData = data;
+                // set length of data to global array length
+                arrlen = gData.quotes.length;
             }
-        })
+        });
     });
+
+    // word takes in an integer input and returns the quote from array index
+    function word(i) {
+        $("#quotes").html("<h3>" + gData.quotes[i].quote + "</h3>");
+        $("#quotes").append("<p><em> <b>-</b> " + gData.quotes[i].author + "</em></p>");
+    }
+
+
+    // set starting count to second element of array
+    let count = 1;
+
+    // nextQuote takes no input but runs the word function based on generated random int
+    function nextQuote() {
+        word(count);
+        // generates random number everytime function runs
+        count = Math.floor(Math.random() * arrlen);
+    }
+
+    // sets quote interval to switch every 10 secs
+    setInterval(nextQuote, 10000);
 </script>
 <style>
     .container {
@@ -41,6 +82,7 @@
 <body>
     <div class="container">
         <div id="quotes"></div>
+        <!--    <button onclick="nextQuote()">next quote</button> -->
     </div>
 </body>
 
