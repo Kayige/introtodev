@@ -10,7 +10,7 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    // Javascript Format -----
+    // Javascript Format to import JSON -----
     // let gData;
     // let xhttp = new XMLHttpRequest();
     // xhttp.onreadystatechange = function() {
@@ -30,8 +30,10 @@
     // xhttp.open("GET", "quotes.json", true);
     // xhttp.send();
 
+    // initialize variables to store the parsed data
     let gData = [];
     let arrlen = "";
+
     // Jquery Format
     $(document).ready(function() {
         $.ajax({
