@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Area</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // Javascript Example
+    function textareaLengthCheck(el) {
+        let textArea = el.value.length;
+        let charactersLeft = 200 - textArea;
+        let count = document.getElementById('RemainingCount');
+        count.innerHTML = "Characters left: " + charactersLeft;
+    }
+
+    // Jquery Example
+    $(document).ready(function() {
+        // test print of data
+        // $('#textarea').html(maxlength + ' characters remaining');
+
+        $('#textarea').keyup(function() {
+            var text_length = $('#textarea').val().length;
+            var text_remaining = 200 - text_length;
+
+            $('#textarea_remaining').html("Characters left: " + text_remaining);
+        });
+    });
+</script>
+
+<body>
+    <h1>Javascript Method</h1>
+    <textarea rows="4" cols="50" maxlength="200" onkeyup="textareaLengthCheck(this)">Enter some text...</textarea>
+    <p id="RemainingCount"></p>
+    <hl></hl>
+    <h1>Jquery Method</h1>
+    <textarea id="textarea" rows="4" cols="50" maxlength="200">Enter Some Text...</textarea>
+    <p id="textarea_remaining"></p>
+</body>
+
+</html>
