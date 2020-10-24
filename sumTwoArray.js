@@ -19,3 +19,6 @@ function sumArray(a1, a2) {
     }
     return result;
 }
+
+// run in debug console the following command:
+// sumArray(array1,array2);
