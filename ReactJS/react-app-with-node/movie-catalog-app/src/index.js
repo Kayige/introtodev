@@ -1,0 +1,24 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SearchMovies from './components/searchMovie/searchMovie';
+import ListMovies from './components/listMovies/listMovie';
+import './index.css';
+
+class Main extends React.Component {
+  render() {
+    return (
+      <div>
+          <div className="container">
+            <h1 className="title">React Movie Database</h1>
+            <SearchMovies/>
+          </div>
+          <div className="container">
+            <h2>Latest Movies</h2>
+        <ListMovies/>
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Main />, document.getElementById('root'));

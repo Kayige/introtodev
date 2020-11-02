@@ -1,0 +1,246 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Lato, Helvetica, sans-serif;
+}
+
+body {
+    font-family: lato;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-size: 1rem;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+.title {
+    font-size: 4.4rem;
+    text-align: center;
+}
+
+
+/* Responsive Grid Settings */
+
+.center,
+.container {
+    margin-left: auto;
+    margin-right: auto
+}
+
+h1 {
+    font-size: 2.5rem
+}
+
+h2 {
+    font-size: 2rem
+}
+
+h3 {
+    font-size: 1.375rem
+}
+
+h4 {
+    font-size: 1.125rem
+}
+
+h5 {
+    font-size: 1rem
+}
+
+h6 {
+    font-size: .875rem
+}
+
+.font-light {
+    font-weight: 300
+}
+
+.font-regular {
+    font-weight: 400
+}
+
+.font-heavy {
+    font-weight: 700
+}
+
+.left {
+    text-align: left
+}
+
+.right {
+    text-align: right
+}
+
+.center {
+    text-align: center
+}
+
+.justify {
+    text-align: justify
+}
+
+.container {
+    width: 95%
+}
+
+.row {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.row [class^=col] {
+    float: left;
+    margin: .5rem 2%;
+    min-height: .125rem
+}
+
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+    width: 96%
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.hidden-sm {
+    display: none
+}
+
+@media only screen and (min-width:33.75em) {
+    .container {
+        width: 80%
+    }
+}
+
+@media only screen and (min-width:45em) {
+    .col-1 {
+        width: 4.33%
+    }
+    .col-2 {
+        width: 12.66%
+    }
+    .col-3 {
+        width: 21%
+    }
+    .col-4 {
+        width: 29.33%
+    }
+    .col-5 {
+        width: 37.66%
+    }
+    .col-6 {
+        width: 46%
+    }
+    .col-7 {
+        width: 54.33%
+    }
+    .col-8 {
+        width: 62.66%
+    }
+    .col-9 {
+        width: 71%
+    }
+    .col-10 {
+        width: 79.33%
+    }
+    .col-11 {
+        width: 87.66%
+    }
+    .col-12 {
+        width: 96%
+    }
+    .hidden-sm {
+        display: block
+    }
+}
+
+@media only screen and (min-width:120em) {
+    .container {
+        width: 90%;
+        max-width: 120rem;
+    }
+}
+
+
+/* Scroll to Top */
+
+#button {
+    display: inline-block;
+    background-color: #00205b;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 500px) {
+    #button {
+        margin: 30px;
+    }
+}
