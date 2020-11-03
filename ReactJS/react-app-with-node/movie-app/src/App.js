@@ -4,31 +4,43 @@ import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
 import Nav from "./Nav";
+import Categories from "./Categories";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app">
-      <Nav />
-      <Banner />
-      <Row
-        title="Upcoming Movies"
-        fetchURL={requests.fetchUpcomingMovies}
-        isLargeRow
-      />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchURL={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Trending Now" fetchURL={requests.fetchTrending} />
-      <Row title="Top Rated" fetchURL={requests.fetchTopRated} />
-      <Row title="Action" fetchURL={requests.fetchActionMovies} />
-      <Row title="Comedy" fetchURL={requests.fetchComedyMovies} />
-      <Row title="Horror" fetchURL={requests.fetchHorrorMovies} />
-      <Row title="Romance" fetchURL={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchURL={requests.fetchDocumentariesMovies} />
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/categories" component={Categories} />
+        </Switch>
+        <Nav />
+        <Banner />
+        <Row
+          title="Upcoming Movies"
+          fetchURL={requests.fetchUpcomingMovies}
+          isLargeRow
+        />
+        <Row
+          title="NETFLIX ORIGINALS"
+          fetchURL={requests.fetchNetflixOriginals}
+          isLargeRow
+        />
+        <Row title="Trending Now" fetchURL={requests.fetchTrending} />
+        <Row title="Top Rated" fetchURL={requests.fetchTopRated} />
+        <Row title="Action" fetchURL={requests.fetchActionMovies} />
+        <Row title="Comedy" fetchURL={requests.fetchComedyMovies} />
+        <Row title="Horror" fetchURL={requests.fetchHorrorMovies} />
+        <Row title="Romance" fetchURL={requests.fetchRomanceMovies} />
+        <Row
+          title="Documentaries"
+          fetchURL={requests.fetchDocumentariesMovies}
+        />
+      </div>
+    </Router>
   );
 }
 
+const Home = () => {};
 export default App;
