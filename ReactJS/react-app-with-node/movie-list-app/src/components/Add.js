@@ -27,27 +27,25 @@ export const Add = () => {
 
   return (
     <div className="add-page">
-      <div className="container">
-        <div className="add-content">
-          <div className="input-wrapper">
-            <input
-              type="text"
-              placeholder="Search for a movie"
-              value={query}
-              onChange={onChange}
-            />
-          </div>
-
-          {results.length > 0 && (
-            <ul className="results">
-              {results.map((movie) => (
-                <li key={movie.id}>
-                  <ResultCard movie={movie} />
-                </li>
-              ))}
-            </ul>
-          )}
+      <div className="add-content">
+        <div className="input-wrapper">
+          <input
+            type="text"
+            placeholder="Search for a movie"
+            value={query}
+            onChange={onChange}
+          />
         </div>
+
+        {results.length > 0 && (
+          <ul className="results">
+            {results.map((movie) => (
+              <li key={movie.id}>
+                <ResultCard movie={movie} />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
