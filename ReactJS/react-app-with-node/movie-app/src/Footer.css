@@ -1,0 +1,7 @@
+.Footer {
+  padding: 10px;
+  justify-content: space-between;
+  object-fit: contain;
+  color: white;
+  text-align: center;
+}

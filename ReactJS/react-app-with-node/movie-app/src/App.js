@@ -4,7 +4,9 @@ import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
 import Nav from "./Nav";
+import Footer from "./Footer";
 import Categories from "./Categories";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +14,6 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/" exact component={Home} />
           <Route path="/categories" component={Categories} />
         </Switch>
         <Nav />
@@ -37,10 +38,10 @@ function App() {
           title="Documentaries"
           fetchURL={requests.fetchDocumentariesMovies}
         />
+        <Footer />
       </div>
     </Router>
   );
 }
 
-const Home = () => {};
 export default App;

@@ -6,7 +6,7 @@ function ItemDetail({ match }) {
     fetchItem();
   }, []);
 
-  const [item, setItem] = useState({ images: {} });
+  const [item, setItem] = useState({});
 
   const fetchItem = async () => {
     const data = await fetch(

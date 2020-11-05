@@ -34,6 +34,9 @@ function Nav() {
         <Link style={navStyle} to="/search">
           <li>Search</li>
         </Link>
+        <Link style={navStyle} to="/search">
+          <li>Favourites</li>
+        </Link>
       </ul>
     </div>
   );
