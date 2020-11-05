@@ -9,19 +9,21 @@ import { Movie } from "./components/Movie";
 
 import "./App.css";
 import "./lib/font-awesome/css/all.min.css";
-
+import { GlobalProvider } from "./context/GlobalState";
 function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Listing} />
-        <Route path="/watchlist" component={Watchlist} />
-        <Route path="/add" component={Add} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/movie/:id" component={Movie} />
-      </Switch>
-    </Router>
+    <GlobalProvider>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Listing} />
+          <Route path="/watchlist" component={Watchlist} />
+          <Route path="/add" component={Add} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/movie/:id" component={Movie} />
+        </Switch>
+      </Router>
+    </GlobalProvider>
   );
 }
 

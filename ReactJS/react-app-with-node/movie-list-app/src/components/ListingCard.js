@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import { Link } from "react-router-dom";
 
 export const ListingCard = ({ movie }) => {
   const { addMovieToCart, moveToWatchlist, watchlist, cart } = useContext(
@@ -10,19 +11,24 @@ export const ListingCard = ({ movie }) => {
   let storedMovieCart = cart.find((o) => o.id === movie.id);
 
   const watchlistDisabled = storedMovie ? true : storedMovieCart ? true : false;
-
   const cartDisabled = storedMovieCart ? true : false;
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + " ..." : str;
   }
+
   return (
     <div className="listing-card">
       <div className="overlay">
         <div className="title">
           <h3>{movie.title}</h3>
         </div>
-        <div className="overview">{truncate(movie?.overview, 150)}</div>
+        <div className="overview">
+          {truncate(movie?.overview, 150)}
+          <Link to={`/movie/${movie.id}`}>
+            <div className="ctrl-btn">Read More</div>
+          </Link>
+        </div>
         <div className="inner-card-controls">
           <button
             className="ctrl-btn"

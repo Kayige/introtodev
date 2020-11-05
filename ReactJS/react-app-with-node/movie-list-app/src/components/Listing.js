@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { ListingCard } from "./ListingCard";
 import Banner from "./Banner";
 import axios from "./axios";
-import { Link } from "react-router-dom";
 
 const api_key = "d431e3825c6c47923e22a5dc91f52227";
 
@@ -37,9 +36,7 @@ export const Listing = () => {
             <div className="movie-grid">
               {lists.map((movie) => (
                 <div key={movie.id}>
-                  <Link to={`/movie/${movie.id}`}>
-                    <ListingCard movie={movie} key={movie.id} />
-                  </Link>
+                  <ListingCard movie={movie} key={movie.id} />
                 </div>
               ))}
             </div>
