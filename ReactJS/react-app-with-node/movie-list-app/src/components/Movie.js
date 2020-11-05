@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
+import { Back } from "./Back";
 import axios from "axios";
 
 const api_key = "d431e3825c6c47923e22a5dc91f52227";
@@ -56,6 +57,9 @@ export const Movie = ({ match }) => {
           />
         </div>
         <div className="col-6">
+          <div className="row-6 left">
+            <Back />
+          </div>
           <h1>{movie.title}</h1>
           <strong> Description: </strong>
           <p>{movie?.overview}</p>
