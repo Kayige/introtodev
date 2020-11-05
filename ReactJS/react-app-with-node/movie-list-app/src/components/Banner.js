@@ -1,18 +1,22 @@
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import axios from "./axios";
+import { Link } from "react-router-dom";
 
 const api_key = "d431e3825c6c47923e22a5dc91f52227";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
 
-  const { moveToWatchlist, watchlist, cart } = useContext(GlobalContext);
+  const { addMovieToCart, moveToWatchlist, watchlist, cart } = useContext(
+    GlobalContext
+  );
 
   let storedMovie = watchlist.find((o) => o.id === movie.id);
   let storedMovieCart = cart.find((o) => o.id === movie.id);
 
   const watchlistDisabled = storedMovie ? true : storedMovieCart ? true : false;
+  const cartDisabled = storedMovieCart ? true : false;
 
   useEffect(() => {
     async function fetchData() {
@@ -51,13 +55,22 @@ function Banner() {
 
         {/** div > 2 buttons */}
         <div className="banner__buttons">
-          <button className="banner__button">Preview</button>
+          <Link to={`/movie/${movie.id}`}>
+            <button className="banner__button">Read</button>
+          </Link>
           <button
             className="banner__button"
             disabled={watchlistDisabled}
             onClick={() => moveToWatchlist(movie)}
           >
             + List
+          </button>
+          <button
+            className="banner__button"
+            disabled={cartDisabled}
+            onClick={() => addMovieToCart(movie)}
+          >
+            + Cart
           </button>
         </div>
 
