@@ -34,31 +34,33 @@ export const Movie = ({ match }) => {
   }, [match.params.id]);
 
   return (
-    <div className="movie-page">
-      <div className="container">
-        <img
-          alt={movie.id}
-          width="30%"
-          src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
-        />
-
-        <h1>{movie.title}</h1>
-        <hr />
-        <strong> Description: </strong>
-        <p>{movie?.overview}</p>
-        <hr />
-        <strong> Rating: </strong>
-        <p className="rate">{movie.vote_average}</p>
-        <hr />
-        <strong> Genre: </strong>
-
-        <hr />
-        <div className="trailer">
-          <strong> Trailer: </strong>
+    <div className="movie-detail">
+      <div className="row">
+        <div className="col-6 center">
+          <img
+            alt={movie.id}
+            width="85%"
+            src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+          />
         </div>
-        <YouTube
-          videoId={movie.videos.results ? movie.videos.results[0].key : null}
-        />
+        <div className="col-6">
+          <h1>{movie.title}</h1>
+          <strong> Description: </strong>
+          <p>{movie?.overview}</p>
+          <hr />
+          <strong> Rating: </strong>
+          <p className="rate">{movie.vote_average}</p>
+          <hr />
+          <div className="col-12">
+            <strong>Trailer: </strong>
+            <YouTube
+              className="col-12"
+              videoId={
+                movie.videos.results ? movie.videos.results[0].key : null
+              }
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
