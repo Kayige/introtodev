@@ -28,9 +28,7 @@ export const Listing = () => {
       <Banner />
       <div className="movie-page">
         <div className="container">
-          <div className="header">
-            <h1 className="heading">Upcoming Movies</h1>
-          </div>
+          <h1 className="heading">Upcoming Movies</h1>
 
           {lists.length > 0 && (
             <div className="movie-grid">

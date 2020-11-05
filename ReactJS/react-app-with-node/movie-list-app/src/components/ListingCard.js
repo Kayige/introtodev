@@ -20,15 +20,10 @@ export const ListingCard = ({ movie }) => {
   return (
     <div className="listing-card">
       <div className="overlay">
-        <div className="title">
-          <h3>{movie.title}</h3>
-        </div>
-        <div className="overview">
-          {truncate(movie?.overview, 150)}
-          <Link to={`/movie/${movie.id}`}>
-            <div className="ctrl-btn">Read More</div>
-          </Link>
-        </div>
+        <h3 className="title">{movie.title}</h3>
+
+        <div className="overview">{truncate(movie?.overview, 150)}</div>
+
         <div className="inner-card-controls">
           <button
             className="ctrl-btn"
@@ -45,6 +40,12 @@ export const ListingCard = ({ movie }) => {
           >
             <i className="fa-fw fa fa-shopping-cart"></i>
           </button>
+
+          <Link to={`/movie/${movie.id}`}>
+            <button className="ctrl-btn">
+              <i className="fa-fw fab fa-readme"></i>
+            </button>
+          </Link>
         </div>
       </div>
       <img
