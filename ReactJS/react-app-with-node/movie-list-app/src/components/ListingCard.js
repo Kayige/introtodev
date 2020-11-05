@@ -20,10 +20,11 @@ export const ListingCard = ({ movie }) => {
   return (
     <div className="listing-card">
       <div className="overlay">
-        <h3 className="title">{movie.title}</h3>
+        <Link to={`/movie/${movie.id}`}>
+          <h3 className="title">{movie.title}</h3>
 
-        <div className="overview">{truncate(movie?.overview, 120)}</div>
-
+          <div className="overview">{truncate(movie?.overview, 100)}</div>
+        </Link>
         <div className="inner-card-controls">
           <button
             className="ctrl-btn"
