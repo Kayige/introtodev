@@ -22,7 +22,7 @@ export const ListingCard = ({ movie }) => {
       <div className="overlay">
         <h3 className="title">{movie.title}</h3>
 
-        <div className="overview">{truncate(movie?.overview, 150)}</div>
+        <div className="overview">{truncate(movie?.overview, 120)}</div>
 
         <div className="inner-card-controls">
           <button

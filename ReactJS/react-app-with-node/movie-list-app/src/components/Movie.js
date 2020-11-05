@@ -21,8 +21,19 @@ export const Movie = ({ match }) => {
     vote_count: 0,
   });
 
+  const [actors, setActors] = useState([]);
+
   useEffect(() => {
     // run useEffect when row loads
+    async function fetchActor() {
+      const req = await axios.get(
+        `https://api.themoviedb.org/3/movie/${match.params.id}/credits?api_key=${api_key}`
+      );
+      setActors(req.data.cast);
+      console.log(req.data.cast);
+    }
+    fetchActor();
+
     async function fetchData() {
       const request = await axios.get(
         `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=${api_key}&append_to_response=videos`
@@ -30,9 +41,10 @@ export const Movie = ({ match }) => {
 
       setMovie(request.data);
     }
+
     fetchData();
   }, [match.params.id]);
-
+  console.log(actors);
   return (
     <div className="movie-detail">
       <div className="row">
@@ -50,6 +62,15 @@ export const Movie = ({ match }) => {
           <hr />
           <strong> Rating: </strong>
           <p className="rate">{movie.vote_average}</p>
+          <hr />
+          <strong> Cast: </strong>
+          <div className="row">
+            {actors.map((actor) => (
+              <p className="col-3" key={actor.id}>
+                {actor.name}
+              </p>
+            ))}
+          </div>
           <hr />
           <div className="col-12">
             <strong>Trailer: </strong>

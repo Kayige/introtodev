@@ -267,7 +267,7 @@ header .nav-links li:last-child {
 
 /* Movie Page */
 .movie-detail {
-  padding: 30px 0;
+  padding: 50px 0;
   background-color: #e6e6e6;
   display: flex;
 }
