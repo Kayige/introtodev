@@ -13,12 +13,16 @@ export const ListingCard = ({ movie }) => {
 
   const cartDisabled = storedMovieCart ? true : false;
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + " ..." : str;
+  }
   return (
     <div className="listing-card">
       <div className="overlay">
         <div className="title">
           <h3>{movie.title}</h3>
         </div>
+        <div className="overview">{truncate(movie?.overview, 150)}</div>
         <div className="inner-card-controls">
           <button
             className="ctrl-btn"
