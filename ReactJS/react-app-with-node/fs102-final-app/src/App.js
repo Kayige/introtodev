@@ -12,6 +12,7 @@ function App() {
         <Banner />
         <Switch>
           <Route path="/" exact></Route>
+          {/* <Router path="/"></Router> */}
         </Switch>
       </Router>
     </div>
