@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* Footer */
+.Footer {
+  margin-top: 20px;
+  background-color: #666;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
