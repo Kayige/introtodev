@@ -3,22 +3,29 @@ import AddCoin from "./AddCoin";
 import CoinList from "./CoinList";
 import { Container, Row, Col } from "react-bootstrap";
 import Banner from "./Banner";
+
 const CoinSummaryPage = () => {
   const padding = { padding: "15px" };
   return (
-    <Container>
+    <>
       <Banner />
-      <Row>
-        <Col className="text-left" style={padding}>
-          <AddCoin />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <CoinList />
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row>
+          <Col sm style={padding}>
+            <AddCoin />
+          </Col>
+          <Col md style={padding}>
+            <h1> Favourites </h1>
+          </Col>
+          <Col sm></Col>
+        </Row>
+        <Row>
+          <Col>
+            <CoinList />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

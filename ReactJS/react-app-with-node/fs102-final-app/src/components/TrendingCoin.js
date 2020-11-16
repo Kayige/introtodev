@@ -17,7 +17,7 @@ const TrendingCoin = ({ coin }) => {
 
       <Card.Footer>
         <a onClick={() => addCoin(coin.id)} href="#">
-          <i className="add-icon fas fa-plus-circle text-success"></i>
+          <i className="add-icon fas fa-plus-circle text-success">&nbsp;Add</i>
         </a>
       </Card.Footer>
     </>

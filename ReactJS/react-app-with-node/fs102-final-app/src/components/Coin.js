@@ -4,25 +4,25 @@ import { Image, Row, Col, Container } from "react-bootstrap";
 
 const Coin = ({ coin, deleteCoin }) => {
   const padding = { padding: "35px" };
+
   return (
     <Container>
       <Row>
         <Link to={`/coins/${coin.id}`}>
-          <Col md={3}>
+          <Col sm>
             <Image
               src={coin.image}
               alt={coin.name}
               height="100px"
               width="auto"
-              rounded
             />
           </Col>
         </Link>
-        <Col md={4} style={padding}>
+        <Col md style={padding}>
           {coin.current_price}
         </Col>
         <Col
-          md={4}
+          md
           className={
             coin.price_change_percentage_24h < 0
               ? "text-danger"
@@ -38,7 +38,7 @@ const Coin = ({ coin, deleteCoin }) => {
           )}
           {coin.price_change_percentage_24h}
         </Col>
-        <Col md={1} style={padding}>
+        <Col md style={padding}>
           <i
             onClick={(e) => {
               e.preventDefault();

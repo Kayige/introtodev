@@ -35,6 +35,9 @@ const Contact = () => {
           Submit
         </Button>
       </Form>
+      <br />
+      <br />
+      <br />
     </Container>
   );
 };

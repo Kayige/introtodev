@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PopularCoin from "./PopularCoin";
-import { Row, Card, CardColumns, Container, Form } from "react-bootstrap";
+import { Row, Col, Card, CardColumns, Container, Form } from "react-bootstrap";
 import coinGecko from "./Axios";
 
 export const Popular = () => {
@@ -34,25 +34,29 @@ export const Popular = () => {
         <br />
         <h1>Popular Crypto Currencies</h1>
         <Row>
-          <Form.Control
-            type="text"
-            placeholder="Search Filter"
-            value={query}
-            onChange={onChange}
-          />
+          <Col fluid>
+            <Form.Control
+              type="text"
+              placeholder="Search Filter"
+              value={query}
+              onChange={onChange}
+            />
+          </Col>
         </Row>
         <br />
-        <CardColumns>
-          {coins
-            .filter((coin) => coin.id.includes(query))
-            .map((coin) => {
-              return (
-                <Card>
-                  <PopularCoin key={coin.id} coin={coin} />
-                </Card>
-              );
-            })}
-        </CardColumns>
+        <Col>
+          <CardColumns>
+            {coins
+              .filter((coin) => coin.id.includes(query))
+              .map((coin) => {
+                return (
+                  <Card>
+                    <PopularCoin key={coin.id} coin={coin} />
+                  </Card>
+                );
+              })}
+          </CardColumns>
+        </Col>
       </Container>
     );
   };

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TrendingCoin from "./TrendingCoin";
-import { Card, CardColumns, Container, Row, Form } from "react-bootstrap";
+import { Card, CardColumns, Container, Row, Col, Form } from "react-bootstrap";
 import coinGecko from "./Axios";
 
 const Trending = () => {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
-
   const onChange = (e) => {
     setQuery(e.target.value);
   };
@@ -34,26 +33,30 @@ const Trending = () => {
         <h1>Trending Coins</h1>
         <br />
         <Row>
-          <Form.Control
-            type="text"
-            placeholder="Search Filter"
-            value={query}
-            onChange={onChange}
-          />
+          <Col fluid>
+            <Form.Control
+              type="text"
+              placeholder="Search Filter"
+              value={query}
+              onChange={onChange}
+            />
+          </Col>
         </Row>
         <br />
         <Row>
-          <CardColumns>
-            {coins
-              .filter((coin) => coin.id.includes(query))
-              .map((coin) => {
-                return (
-                  <Card>
-                    <TrendingCoin key={coin.id} coin={coin} />
-                  </Card>
-                );
-              })}
-          </CardColumns>
+          <Col>
+            <CardColumns>
+              {coins
+                .filter((coin) => coin.id.includes(query))
+                .map((coin) => {
+                  return (
+                    <Card>
+                      <TrendingCoin key={coin.id} coin={coin} />
+                    </Card>
+                  );
+                })}
+            </CardColumns>
+          </Col>
         </Row>
       </Container>
     );

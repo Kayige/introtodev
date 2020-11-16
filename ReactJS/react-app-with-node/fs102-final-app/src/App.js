@@ -10,7 +10,7 @@ import CoinDetailPage from "./components/CoinDetailPage";
 import CoinSummaryPage from "./components/CoinSummaryPage";
 import { WatchListContextProvider } from "./components/WatchList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import ScrollToTop from "react-scroll-up";
 function App() {
   return (
     <div className="App">
@@ -24,10 +24,15 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/coins/:id" component={CoinDetailPage} />
             <Route path="/trending" component={Trending} />
-            {/* <Router path="/"></Router> */}
           </Switch>
         </Router>
       </WatchListContextProvider>
+      <ScrollToTop showUnder={160}>
+        <span className="ScrollToTop">
+          <i class="fas fa-arrow-up"></i>
+          &nbsp;BACK TO TOP
+        </span>
+      </ScrollToTop>
       <Footer />
     </div>
   );

@@ -7,13 +7,16 @@ const About = () => {
   const alignstyle = { textAlign: "left" };
 
   return (
-    <Container style={alignstyle}>
+    <Container>
       <br />
       <Row>
-        <h1>About</h1>
+        <h1>About Me</h1>
       </Row>
       <Row>
-        <Col>
+        <Col sm>
+          <Image src={me} width="300px" height="auto" />
+        </Col>
+        <Col sm style={alignstyle}>
           <hr />
           <p>MAGES FS102 Final Project Assignment</p>
           <p>
@@ -22,16 +25,19 @@ const About = () => {
           <p>External Libraries used:</p>
           <ul>
             <li>
+              <strong>axios</strong>
+            </li>
+            <li>
               <strong>react-bootstrap</strong>
             </li>
             <li>
               <strong>react-router-dom</strong>
             </li>
             <li>
-              <strong>react-typical</strong>
+              <strong>react-scroll-up</strong>
             </li>
             <li>
-              <strong>axios</strong>
+              <strong>react-typical</strong>
             </li>
           </ul>
 
@@ -41,10 +47,17 @@ const About = () => {
             wrapper="p"
           />
         </Col>
-        <Col>
-          <Image src={me} />
-        </Col>
       </Row>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </Container>
   );
 };

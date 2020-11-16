@@ -23,30 +23,38 @@ export default function Banner() {
         {`
     .height {
 height: 500px;
-background-position: top;
-    }
+object-fit: cover;
+width: 100%;
 
+    }
+    .caption {
+      bottom: 30%; !important
+      text-align: left; !important
+      background: rgba(0, 0, 0, 0.5);
+    }
     `}
       </style>
 
       <Carousel>
-        {news.map((news) => (
-          <Carousel.Item className="height">
-            <img
-              className="d-sm-block"
-              src={news.originalImageUrl}
-              alt={news.title}
-              width="100%"
-            />
-            <Carousel.Caption>
-              <h3>{news.title}</h3>
-              <p className="left">{truncate(news?.description, 200)}</p>
-              <Button variant="secondary" href={news.url} target="_blank">
-                Read more
-              </Button>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
+        {news
+          .filter((news) => news.originalImageUrl)
+          .map((news) => (
+            <Carousel.Item>
+              <img
+                className="d-sm-block"
+                src={news.originalImageUrl}
+                alt={news.title}
+                className="height"
+              />
+              <Carousel.Caption className="caption">
+                <h4>{news.title}</h4>
+                <p className="left">{truncate(news?.description, 80)}</p>
+                <Button variant="primary" href={news.url} target="_blank">
+                  Read more
+                </Button>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
       </Carousel>
     </>
   );

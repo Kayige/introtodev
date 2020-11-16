@@ -10,9 +10,10 @@ const PopularCoin = ({ coin }) => {
   return (
     <>
       <Link to={`/coins/${coin.id}`}>
+        <br />
         <Image src={coin.image} alt={coin.name} height="50px" width="50px" />
+        <Card.Title>{coin.name}</Card.Title>
       </Link>
-      <Card.Title>{coin.name}</Card.Title>
       <Card.Body>{coin.current_price}</Card.Body>
 
       <Card.Text
