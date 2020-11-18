@@ -1,19 +1,55 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { Card, Image } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+// import { Link } from "react-router-dom";
+import { Card, Image, Modal, Col, Button } from "react-bootstrap";
 import { WatchListContext } from "./WatchList";
+import CoinDetailPage from "./CoinDetailPage";
 
 const PopularCoin = ({ coin }) => {
   const { addCoin } = useContext(WatchListContext);
   const padding = { padding: "35px" };
-
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
-      <Link to={`/coins/${coin.id}`}>
+      {/* <Link to={`/coins/${coin.id}`}>
         <br />
         <Image src={coin.image} alt={coin.name} height="50px" width="50px" />
         <Card.Title>{coin.name}</Card.Title>
-      </Link>
+      </Link> */}
+      <Col sm onClick={handleShow}>
+        <Image src={coin.image} alt={coin.name} height="100px" width="auto" />
+      </Col>
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        keyboard={false}
+        backdrop="static"
+        size="lg"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>
+            {coin.id}{" "}
+            <Image
+              src={coin.image}
+              alt={coin.name}
+              height="50px"
+              width="auto"
+            />
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CoinDetailPage coin={coin} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       <Card.Body>{coin.current_price}</Card.Body>
 
       <Card.Text

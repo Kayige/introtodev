@@ -41,10 +41,9 @@ width: 100%;
           .map((news) => (
             <Carousel.Item>
               <img
-                className="d-sm-block"
+                className="d-sm-block height"
                 src={news.originalImageUrl}
                 alt={news.title}
-                className="height"
               />
               <Carousel.Caption className="caption">
                 <h4>{news.title}</h4>

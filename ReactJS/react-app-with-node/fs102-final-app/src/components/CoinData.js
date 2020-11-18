@@ -45,9 +45,9 @@ const CoinData = ({ data }) => {
               </Col>
             </Col>
           </Row>
-          <Row>
-            <Col style={alignStyle}>{/* <Back /> */}</Col>
-          </Row>
+          {/* <Row>
+            <Col style={alignStyle}><Back /></Col>
+          </Row> */}
         </Container>
       );
     }
