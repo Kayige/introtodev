@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
 import HistoryChart from "./HistoryChart";
 import CoinData from "./CoinData";
 import coinGecko from "./Axios";
 import { Container } from "react-bootstrap";
 
 const CoinDetailPage = ({ coin }) => {
-  // const { id } = useParams();
   const [coinData, setCoinData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
