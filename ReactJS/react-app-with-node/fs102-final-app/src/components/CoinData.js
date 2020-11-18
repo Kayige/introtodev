@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import { Back } from "./Back";
+// import { Back } from "./Back";
 const CoinData = ({ data }) => {
   const alignStyle = { textAlign: "center", padding: "20px" };
   const renderData = () => {
@@ -46,9 +46,7 @@ const CoinData = ({ data }) => {
             </Col>
           </Row>
           <Row>
-            <Col style={alignStyle}>
-              <Back />
-            </Col>
+            <Col style={alignStyle}>{/* <Back /> */}</Col>
           </Row>
         </Container>
       );
