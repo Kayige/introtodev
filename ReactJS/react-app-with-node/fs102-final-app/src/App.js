@@ -28,10 +28,10 @@ function App() {
         </Router>
       </WatchListContextProvider>
       <ScrollToTop showUnder={160}>
-        <span className="ScrollToTop">
+        <div className="ScrollToTop">
           <i class="fas fa-arrow-up"></i>
           &nbsp;BACK TO TOP
-        </span>
+        </div>
       </ScrollToTop>
       <Footer />
     </div>

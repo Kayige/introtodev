@@ -65,8 +65,7 @@ const About = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
+
     </Container>
   );
 };
