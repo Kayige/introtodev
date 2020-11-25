@@ -28,9 +28,11 @@ width: 100%;
 
     }
     .caption {
-      bottom: 30%; !important
-      text-align: left; !important
-      background: rgba(0, 0, 0, 0.5);
+      bottom: 10% !important;
+      text-align: left !important;
+      background: rgba(0, 0, 0, 0.2) !important;
+      padding: 10px;
+      border-radius: 5px;
     }
     `}
       </style>
@@ -47,7 +49,7 @@ width: 100%;
               />
               <Carousel.Caption className="caption">
                 <h4>{news.title}</h4>
-                <p className="left">{truncate(news?.description, 80)}</p>
+                <p className="left">{truncate(news?.description, 85)}</p>
                 <Button variant="primary" href={news.url} target="_blank">
                   Read more
                 </Button>
