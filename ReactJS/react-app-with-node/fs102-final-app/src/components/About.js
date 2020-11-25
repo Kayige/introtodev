@@ -22,6 +22,15 @@ const About = () => {
           <p>
             Build with <strong>ReactJS</strong>
           </p>
+          <p>API used:</p>
+          <ul>
+            <li>
+              <strong>coinGecko</strong>
+            </li>
+            <li>
+              <strong>Crypto-News-API</strong>
+            </li>
+          </ul>
           <p>External Libraries used:</p>
           <ul>
             <li>

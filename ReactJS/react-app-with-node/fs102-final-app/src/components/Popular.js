@@ -11,6 +11,7 @@ export const Popular = () => {
   const onChange = (e) => {
     setQuery(e.target.value);
   };
+  
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);

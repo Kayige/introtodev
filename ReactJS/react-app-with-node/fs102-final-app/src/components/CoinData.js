@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 // import { Back } from "./Back";
 const CoinData = ({ data }) => {
-  const alignStyle = { textAlign: "center", padding: "20px" };
+// const alignStyle = { textAlign: "center", padding: "20px" };
   const renderData = () => {
     if (data) {
       return (
