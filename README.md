@@ -2,9 +2,20 @@
 
 Introduction to Web Development Stuff<br/><br/>
 
-Gabriel Lee<br/><br/>
+This repo is maintained as an indicator of progress in my learning of a Full Stack Web Development Environment.<br/>
+
+FS101 - Basic Web Development (HTML/CSS)<br/>
+FS102 - Introduction to Javascript (JS/ReactJS)<br/>
+FS103 - Database (PostGre/SQL)<br/>
+FS104 - Backend Development (Python)<br/>
+
+# Updates
 
 17/12/2020 - Re-organized Structure<br/>
+11/12/2020 - Upload FS103 Project Submission<br/>
+18/11/2020 - Uploaded ReactJS FS102 Final Project<br/>
+05/11/2020 - Uploaded ReactJS FS102 Test Projects<br/>
+23/10/2020 - Uploaded FS102 Assignment - Jquery<br/>
 16/10/2020 - Uploaded FS102 Assignment 6 Changes<br/>
 14/10/2020 - Uploaded FS102 Assignment 6 initial files<br/>
 01/10/2020 - Renamed Folders to Module - Assignment Format / Uploaded FS102 Assignment 4<br/>
