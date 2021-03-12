@@ -7,7 +7,7 @@ This repo is maintained as an indicator of progress in my learning of a Full Sta
 FS101 - Basic Web Development (HTML/CSS)<br/>
 FS102 - Introduction to Javascript (JS/ReactJS)<br/>
 FS103 - Database (PostGre/SQL)<br/>
-FS104 - Backend Development (Python)<br/>
+FS104 - Backend Development (Python)<br/> - Refer to [Djangorestapi Repository](https://github.com/gabrielleeyj/djangorestapi)
 FS105 - Capstone
 
 # Updates
