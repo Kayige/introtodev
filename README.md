@@ -8,9 +8,11 @@ FS101 - Basic Web Development (HTML/CSS)<br/>
 FS102 - Introduction to Javascript (JS/ReactJS)<br/>
 FS103 - Database (PostGre/SQL)<br/>
 FS104 - Backend Development (Python)<br/>
+FS105 - Capstone
 
 # Updates
 
+12/03/2020 - Updated Readme<br/>
 17/12/2020 - Re-organized Structure<br/>
 11/12/2020 - Upload FS103 Project Submission<br/>
 18/11/2020 - Uploaded ReactJS FS102 Final Project<br/>
